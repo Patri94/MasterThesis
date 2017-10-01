@@ -26,7 +26,7 @@
         <uri>model://Tag2</uri>
         <pose>0.707 -4.525 2.5 0 0 3.14</pose>
     </include>
-    <include>
+    <include><size>0.297 0.001 0.42</size>
         <uri>model://Tag3</uri>
         <pose>3.85972 -0.8 2.5 0 0 1.57</pose>
     </include>
@@ -40,7 +40,7 @@
     </include>
     <include>
         <uri>model://Doris</uri>
-        <pose>1 1 0 0 0 1.57</pose>
+        <pose>2 1 0 0 1.57</pose>
     </include>
     <model name='ground_plane'>
       <static>1</static>

@@ -14,6 +14,10 @@
 #include <fstream>
 #include <functional>
 #include <signal.h>
+#include <tf/tf.h>
+#include <geometry_msgs/Pose.h>
+#include <image_geometry/pinhole_camera_model.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 using namespace cv;
 using namespace std;
@@ -28,6 +32,12 @@ class Marcador{
         double area;
         double angle;
         cv::RotatedRect rect;
+        std::vector<geometry_msgs::Pose> PositionCorners3d;
+        std::vector<geometry_msgs::Transform> ToCorners;
+        std::vector<geometry_msgs::Pose> ReltoCam;
+        geometry_msgs::Pose CenterWorld;
+        geometry_msgs::Pose CenterRel;
+
     public:
         void MarkerPoints(std::vector<cv::Point2f> markerPoints);
         void addPoint(cv::Point2f point);
@@ -47,4 +57,14 @@ class Marcador{
         int getMapID(void);
         int getSectorID(void);
         int getMarkerID(void);
+        void setPoseWorld(std::vector<geometry_msgs::Pose> Position);
+        vector<geometry_msgs::Pose> getPoseWorld (void);
+        void setTransformCorners(std::vector<geometry_msgs::Transform> CornersTr);
+        std::vector<geometry_msgs::Transform> getTransformCorners (void);
+        void setRelativePose(std::vector<geometry_msgs::Pose> Relativa);
+        std::vector<geometry_msgs::Pose> getRelativeCoordinates(void);
+        void setCenterWorld(geometry_msgs::Pose CenterW);
+        void setCenterRel(geometry_msgs::Pose CenterR);
+        geometry_msgs::Pose getCenterWorld (void);
+        geometry_msgs::Pose getCenterRel (void);
 };

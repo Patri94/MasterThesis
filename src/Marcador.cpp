@@ -59,3 +59,45 @@ int Marcador::getMapID(void){
     return this->mapID;
 }
 
+std::vector<geometry_msgs::Pose> Marcador::getPoseWorld(void){
+    return this->PositionCorners3d;
+}
+
+void Marcador::setPoseWorld(std::vector<geometry_msgs::Pose> Position){
+    this->PositionCorners3d=Position;
+}
+
+void Marcador::setTransformCorners(std::vector<geometry_msgs::Transform> CornersTr){
+    this->ToCorners=CornersTr;
+}
+
+
+
+std::vector<geometry_msgs::Transform> Marcador::getTransformCorners (void){
+    return this->ToCorners;
+}
+
+void Marcador::setRelativePose(std::vector<geometry_msgs::Pose> Relativa){
+    this->ReltoCam=Relativa;
+
+}
+std::vector<geometry_msgs::Pose> Marcador::getRelativeCoordinates (void){
+    return this->ReltoCam;
+}
+void Marcador::setCenterWorld(geometry_msgs::Pose CenterW){
+    this->CenterWorld=CenterW;
+}
+void Marcador::setCenterRel(geometry_msgs::Pose CenterR){
+     this->CenterRel=CenterR;
+}
+geometry_msgs::Pose Marcador::getCenterWorld (void){
+    return this->CenterWorld;
+}
+geometry_msgs::Pose Marcador::getCenterRel(void){
+    return this->CenterRel;
+}
+
+
+
+
+

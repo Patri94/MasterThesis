@@ -2,7 +2,7 @@
 <sdf version="1.4">
   <model name='Camara2'>
    <pose>0 0 0 0 0 0</pose>
-   <link name='link'>
+   <link name='linkCam2'>
      <inertial>
        <mass>0.1</mass>
        <inertia>
@@ -44,12 +44,12 @@
       </script>
     </material>
      </visual>
-     <sensor name="camera" type="wideanglecamera">
+     <sensor name="camera" type="camera">
         <camera>
-          <horizontal_fov>2.094394667</horizontal_fov>
+          <horizontal_fov>2.093</horizontal_fov>
           <image>
-            <width>320</width>
-            <height>240</height>
+            <width>604</width>
+            <height>679</height>
           </image>
           <clip>
             <near>0.1</near>
@@ -68,17 +68,23 @@
         <cameraName>Doris/camera2</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera_link</frameName>
+        <frameName>Doris__Camara2__linkCam2</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>-2.6019586095779829e-001</distortionK1>
         <distortionK2>5.5052401922323718e-002</distortionK2>
         <distortionK3>0.0</distortionK3>
         <distortionT1>0.0</distortionT1>
         <distortionT2>-4.5449850126361765e-003</distortionT2>
+	
+        <!--<distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>-->
        </plugin>
       </sensor>
     </link>
-	<self_collide>0</self_collide>
+     <self_collide>0</self_collide>
      <kinematic>0</kinematic>
      <gravity>1</gravity>
  </model>

@@ -15,6 +15,10 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   gazebo_ros
   image_transport
+  tf
+  geometry_msgs
+  image_geometry
+  tf2
 )
 ##include(CheckFunctionExists)
 include_directories(include ${catkin_INCLUDE_DIRS})
