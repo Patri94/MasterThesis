@@ -23,7 +23,7 @@ find_package(catkin REQUIRED COMPONENTS
 ##include(CheckFunctionExists)
 include_directories(include ${catkin_INCLUDE_DIRS})
 add_library(Detector
-	src/CameraNode.cpp
+	src/Camera.cpp
 	src/Marcador.cpp
 )
 

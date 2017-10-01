@@ -84,18 +84,7 @@ void Marcador::setRelativePose(std::vector<geometry_msgs::Pose> Relativa){
 std::vector<geometry_msgs::Pose> Marcador::getRelativeCoordinates (void){
     return this->ReltoCam;
 }
-void Marcador::setCenterWorld(geometry_msgs::Pose CenterW){
-    this->CenterWorld=CenterW;
-}
-void Marcador::setCenterRel(geometry_msgs::Pose CenterR){
-     this->CenterRel=CenterR;
-}
-geometry_msgs::Pose Marcador::getCenterWorld (void){
-    return this->CenterWorld;
-}
-geometry_msgs::Pose Marcador::getCenterRel(void){
-    return this->CenterRel;
-}
+
 
 
 

@@ -35,8 +35,6 @@ class Marcador{
         std::vector<geometry_msgs::Pose> PositionCorners3d;
         std::vector<geometry_msgs::Transform> ToCorners;
         std::vector<geometry_msgs::Pose> ReltoCam;
-        geometry_msgs::Pose CenterWorld;
-        geometry_msgs::Pose CenterRel;
 
     public:
         void MarkerPoints(std::vector<cv::Point2f> markerPoints);
@@ -63,8 +61,5 @@ class Marcador{
         std::vector<geometry_msgs::Transform> getTransformCorners (void);
         void setRelativePose(std::vector<geometry_msgs::Pose> Relativa);
         std::vector<geometry_msgs::Pose> getRelativeCoordinates(void);
-        void setCenterWorld(geometry_msgs::Pose CenterW);
-        void setCenterRel(geometry_msgs::Pose CenterR);
-        geometry_msgs::Pose getCenterWorld (void);
-        geometry_msgs::Pose getCenterRel (void);
+
 };
